@@ -19,7 +19,7 @@
   --genai-bg-white:#FFFFFF; --genai-bg-gray:#F6F8FC;
   --genai-blue:#3B82F6; --genai-cyan:#22D3EE; --genai-violet:#8B5CF6;
   --genai-orange:#F97316; --genai-orange-hover:#FB8C3C; --genai-orange-text:#C2410C;
-  --genai-header-h:84px; --genai-admin-h:0px;
+  --genai-header-h:96px; --genai-admin-h:0px;
   font-family:'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic Medium','Yu Gothic',sans-serif;
   color:var(--genai-text-main); font-size:16px; line-height:1.9;
   margin:0; background:var(--genai-bg-white); overflow-wrap:break-word;
@@ -58,14 +58,11 @@ body.admin-bar{--genai-admin-h:32px}
   display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 24px}
 .genai-header__brand{display:flex;align-items:center;gap:12px;min-width:0}
 .genai-header__logo{display:flex;align-items:center;flex:none}
-.genai-header__logo img{height:64px;width:auto;display:block}
+.genai-header__logo img{height:clamp(52px,10vw,80px);width:auto;max-width:100%;display:block}
 .genai-header__cta{padding:13px 26px;font-size:14px}
 @media (max-width:719px){
   .genai-header__inner{padding:0 16px}
   .genai-header__cta{padding:9px 16px;font-size:13px;white-space:nowrap}
-}
-@media (max-width:480px){
-  .genai-header__logo img{height:46px}
 }
 
 /* ===== hero ===== */
