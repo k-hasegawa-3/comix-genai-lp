@@ -240,21 +240,35 @@ body.admin-bar{--genai-admin-h:32px}
 
 /* ===== voices ===== */
 .genai-voices{background:var(--genai-bg-gray)}
-.genai-voices__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
-.genai-voice{padding:36px 28px;display:flex;flex-direction:column;text-align:center}
-.genai-voice__avatar{width:144px;height:144px;aspect-ratio:1/1;border-radius:50%;margin:0 auto 22px;padding:4px;
+.genai-voices .genai-section-head{margin-bottom:64px}
+.genai-voices__grid{display:flex;flex-direction:column;gap:40px;max-width:960px;margin:0 auto}
+.genai-voice{display:grid;grid-template-columns:minmax(190px,30%) 1fr;gap:36px;padding:44px 40px;text-align:left}
+.genai-voice__person{display:flex;flex-direction:column;align-items:center;text-align:center;
+  padding-right:36px;border-right:1px solid rgba(15,27,51,.08)}
+.genai-voice__avatar{width:120px;height:120px;aspect-ratio:1/1;border-radius:50%;margin:0 auto 18px;padding:4px;flex:none;
   background:conic-gradient(var(--genai-blue),var(--genai-cyan),var(--genai-violet),var(--genai-blue));overflow:hidden}
-.genai-voice__avatar svg,.genai-voice__avatar img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;background:#EEF2F7}
-.genai-voice__quote{position:relative;color:var(--genai-ink-950);font-size:14px;line-height:1.85;text-align:left;padding-top:6px}
-.genai-voice__quote::before{content:'\201C';position:absolute;top:-14px;left:-4px;font-size:44px;line-height:1;font-family:Georgia,serif;color:var(--genai-blue);opacity:.35}
-.genai-voice__quote p{margin-top:1em}
-.genai-voice__quote p:first-child{margin-top:0}
-.genai-voice__bio{color:var(--genai-text-muted);font-size:13px;text-align:left;flex:1;margin-top:20px;padding-top:16px;border-top:1px solid rgba(15,27,51,.08)}
-.genai-voice__name{margin-top:22px;padding-top:18px;border-top:1px solid rgba(15,27,51,.08)}
-.genai-voice__name b{display:block;font-size:18px;font-weight:900}
+.genai-voice__avatar img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;background:#EEF2F7}
+.genai-voice__identity{width:100%}
+.genai-voice__name b{display:block;font-size:20px;font-weight:900;color:var(--genai-text-main)}
 .genai-voice__name span{display:block;color:var(--genai-text-muted);font-family:'Space Grotesk','Noto Sans JP',sans-serif;
-  font-size:13px;letter-spacing:.08em;margin-top:2px}
-@media (max-width:1023px){ .genai-voices__grid{grid-template-columns:1fr;max-width:560px;margin:0 auto} }
+  font-size:12px;letter-spacing:.08em;margin-top:4px}
+.genai-voice__bio{color:var(--genai-text-muted);font-size:13px;line-height:1.7;text-align:center;
+  margin-top:16px;padding-top:16px;border-top:1px solid rgba(15,27,51,.08)}
+.genai-voice__quote{position:relative;color:var(--genai-text-main);font-size:16px;line-height:1.8;padding-top:8px}
+.genai-voice__quote::before{content:'\201C';position:absolute;top:-20px;left:-6px;font-size:52px;line-height:1;
+  font-family:Georgia,serif;color:var(--genai-blue);opacity:.22}
+.genai-voice__quote p{margin-top:14px}
+.genai-voice__quote p:first-child{margin-top:0;font-size:17px;font-weight:700}
+@media (max-width:719px){
+  .genai-voice{grid-template-columns:1fr;gap:0;padding:28px 22px}
+  .genai-voice__person{flex-direction:row;align-items:center;text-align:left;
+    border-right:none;border-bottom:1px solid rgba(15,27,51,.08);padding:0 0 22px;margin-bottom:22px;gap:16px}
+  .genai-voice__avatar{width:72px;height:72px;margin:0}
+  .genai-voice__identity{text-align:left}
+  .genai-voice__bio{text-align:left;margin-top:8px;padding-top:0;border-top:none}
+  .genai-voice__quote{font-size:15px}
+  .genai-voice__quote p:first-child{font-size:16px}
+}
 
 /* ===== contact ===== */
 .genai-contact{position:relative;overflow:hidden;background:var(--genai-ink-900)}
@@ -575,8 +589,14 @@ select.genai-field__input{appearance:auto}
       </div>
       <div class="genai-voices__grid">
         <article class="genai-card genai-voice genai-reveal">
-          <div class="genai-voice__avatar" aria-hidden="true">
-            <img src="assets/voices/takano.jpg" alt="">
+          <div class="genai-voice__person">
+            <div class="genai-voice__avatar" aria-hidden="true">
+              <img src="assets/voices/takano.jpg" alt="">
+            </div>
+            <div class="genai-voice__identity">
+              <p class="genai-voice__name"><b>高野 秀敏</b><span>Hidetoshi Takano</span></p>
+              <p class="genai-voice__bio">株式会社キープレイヤーズ代表取締役<br>東北大学特任教授（客員）、80社以上に投資し、9社上場経験。</p>
+            </div>
           </div>
           <div class="genai-voice__quote">
             <p>COMIXの生成AI活用支援は、本当に素晴らしい取り組みです！</p>
@@ -584,12 +604,16 @@ select.genai-field__input{appearance:auto}
             <p>特に感動するのは、BPO型から共同実施型まで、企業の状況に応じて柔軟にサポートする姿勢。単なる技術提供ではなく、真のパートナーとして伴走してくれます。</p>
             <p>この挑戦が日本のビジネス界に新たな可能性を切り開くことを確信しています。応援しています！</p>
           </div>
-          <p class="genai-voice__bio">株式会社キープレイヤーズ代表取締役<br>東北大学特任教授（客員）、80社以上に投資し、9社上場経験。</p>
-          <p class="genai-voice__name"><b>高野 秀敏</b><span>Hidetoshi Takano</span></p>
         </article>
         <article class="genai-card genai-voice genai-reveal">
-          <div class="genai-voice__avatar" aria-hidden="true">
-            <img src="assets/voices/maruo.jpg" alt="">
+          <div class="genai-voice__person">
+            <div class="genai-voice__avatar" aria-hidden="true">
+              <img src="assets/voices/maruo.jpg" alt="">
+            </div>
+            <div class="genai-voice__identity">
+              <p class="genai-voice__name"><b>丸尾 浩一</b><span>Koichi Maruo</span></p>
+              <p class="genai-voice__bio">株式会社Major7thの代表取締役を務めながら、上場会社を含む複数社の社外役員等を兼務。</p>
+            </div>
           </div>
           <div class="genai-voice__quote">
             <p>多くの企業が生産性向上という課題に直面し、AI活用を進めようとしています。</p>
@@ -597,20 +621,22 @@ select.genai-field__input{appearance:auto}
             <p>COMIXの生成AI活用支援は、AI専門家が伴走しながら実践的な支援を通じて、AI活用を組織へ定着させていく、本質的な価値を提供してくれるサービスです。</p>
             <p>AIを真の力に変え、一歩先の競争力を獲得するための、非常に意義深いサービスだと考えています。</p>
           </div>
-          <p class="genai-voice__bio">株式会社Major7thの代表取締役を務めながら、上場会社を含む複数社の社外役員等を兼務。</p>
-          <p class="genai-voice__name"><b>丸尾 浩一</b><span>Koichi Maruo</span></p>
         </article>
         <article class="genai-card genai-voice genai-reveal">
-          <div class="genai-voice__avatar" aria-hidden="true">
-            <img src="assets/voices/yoshioka.jpg" alt="">
+          <div class="genai-voice__person">
+            <div class="genai-voice__avatar" aria-hidden="true">
+              <img src="assets/voices/yoshioka.jpg" alt="">
+            </div>
+            <div class="genai-voice__identity">
+              <p class="genai-voice__name"><b>吉岡 諒</b><span>Ryo Yoshioka</span></p>
+              <p class="genai-voice__bio">代表取締役の小島と共に2006年に株式会社ウィルゲートを設立。個人として累計で3,000社のWebマーケティングの課題解決提案を実施。</p>
+            </div>
           </div>
           <div class="genai-voice__quote">
             <p>「AIを使うこと」が目的化しないよう、まず価値が出る業務を見極める設計が秀逸だと感じました！</p>
             <p>講座やサポートも充実しており、現場での学習から活用までしっかり伴走してくれます。</p>
             <p>AI活用を推進したい企業に、自信を持っておすすめできるサービスです！</p>
           </div>
-          <p class="genai-voice__bio">代表取締役の小島と共に2006年に株式会社ウィルゲートを設立。個人として累計で3,000社のWebマーケティングの課題解決提案を実施。</p>
-          <p class="genai-voice__name"><b>吉岡 諒</b><span>Ryo Yoshioka</span></p>
         </article>
       </div>
     </div>
