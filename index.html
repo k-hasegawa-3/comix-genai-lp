@@ -242,7 +242,7 @@ body.admin-bar{--genai-admin-h:32px}
 .genai-voices{background:var(--genai-bg-gray)}
 .genai-voices .genai-section-head{margin-bottom:64px}
 .genai-voices__grid{display:flex;flex-direction:column;gap:40px;max-width:960px;margin:0 auto}
-.genai-voice{display:grid;grid-template-columns:minmax(190px,30%) 1fr;gap:36px;padding:44px 40px;text-align:left}
+.genai-voice{display:grid;grid-template-columns:minmax(190px,30%) 1fr;gap:36px;padding:60px 40px;text-align:left}
 .genai-voice__person{display:flex;flex-direction:column;align-items:center;text-align:center;
   padding-right:36px;border-right:1px solid rgba(15,27,51,.08)}
 .genai-voice__avatar{width:120px;height:120px;aspect-ratio:1/1;border-radius:50%;margin:0 auto 18px;padding:4px;flex:none;
@@ -254,20 +254,21 @@ body.admin-bar{--genai-admin-h:32px}
   font-size:12px;letter-spacing:.08em;margin-top:4px}
 .genai-voice__bio{color:var(--genai-text-muted);font-size:13px;line-height:1.7;text-align:center;
   margin-top:16px;padding-top:16px;border-top:1px solid rgba(15,27,51,.08)}
-.genai-voice__quote{position:relative;color:var(--genai-text-main);font-size:16px;line-height:1.8;padding-top:8px}
+.genai-voice__quote{position:relative;color:var(--genai-text-main);font-size:17px;line-height:1.9;padding-top:8px;max-width:760px}
 .genai-voice__quote::before{content:'\201C';position:absolute;top:-20px;left:-6px;font-size:52px;line-height:1;
   font-family:Georgia,serif;color:var(--genai-blue);opacity:.22}
-.genai-voice__quote p{margin-top:14px}
-.genai-voice__quote p:first-child{margin-top:0;font-size:17px;font-weight:700}
+.genai-voice__quote strong{color:var(--genai-blue);font-weight:700}
+.genai-voice__quote p{margin-top:24px}
+.genai-voice__quote p:first-child{margin-top:0;font-size:20px;font-weight:700}
 @media (max-width:719px){
-  .genai-voice{grid-template-columns:1fr;gap:0;padding:28px 22px}
+  .genai-voice{grid-template-columns:1fr;gap:0;padding:36px 24px}
   .genai-voice__person{flex-direction:row;align-items:center;text-align:left;
     border-right:none;border-bottom:1px solid rgba(15,27,51,.08);padding:0 0 22px;margin-bottom:22px;gap:16px}
   .genai-voice__avatar{width:72px;height:72px;margin:0}
   .genai-voice__identity{text-align:left}
   .genai-voice__bio{text-align:left;margin-top:8px;padding-top:0;border-top:none}
-  .genai-voice__quote{font-size:15px}
-  .genai-voice__quote p:first-child{font-size:16px}
+  .genai-voice__quote{font-size:16px}
+  .genai-voice__quote p:first-child{font-size:18px}
 }
 
 /* ===== contact ===== */
@@ -600,8 +601,8 @@ select.genai-field__input{appearance:auto}
           </div>
           <div class="genai-voice__quote">
             <p>COMIXの生成AI活用支援は、本当に素晴らしい取り組みです！</p>
-            <p>鈴木さんのリーダーシップのもと、1,700社を超える支援実績で培った知見を活かし、企業ごとに最適なAI活用を支援している点に大きな価値を感じています。</p>
-            <p>特に感動するのは、BPO型から共同実施型まで、企業の状況に応じて柔軟にサポートする姿勢。単なる技術提供ではなく、真のパートナーとして伴走してくれます。</p>
+            <p>鈴木さんのリーダーシップのもと、<strong>1,700社</strong>を超える支援実績で培った知見を活かし、企業ごとに最適なAI活用を支援している点に大きな価値を感じています。</p>
+            <p>特に感動するのは、<strong>BPO型</strong>から<strong>共同実施型</strong>まで、企業の状況に応じて柔軟にサポートする姿勢。単なる技術提供ではなく、真のパートナーとして伴走してくれます。</p>
             <p>この挑戦が日本のビジネス界に新たな可能性を切り開くことを確信しています。応援しています！</p>
           </div>
         </article>
