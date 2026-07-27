@@ -217,6 +217,10 @@ body.admin-bar{--genai-admin-h:32px}
 .genai-step h3{font-size:19px;font-weight:900;margin-bottom:6px}
 .genai-step__tag{color:var(--genai-orange-text);font-weight:700;font-size:14px;margin-bottom:10px}
 .genai-step__desc{color:var(--genai-text-muted);font-size:14px}
+.genai-step__examples{margin-top:16px;padding-top:14px;border-top:1px dashed rgba(15,27,51,.12);display:flex;flex-direction:column;gap:8px}
+.genai-step__examples li{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--genai-text-muted)}
+.genai-step__exicon{width:18px;height:18px;flex:none;color:var(--genai-blue)}
+.genai-step__exicon svg{width:100%;height:100%}
 @media (max-width:719px){
   .genai-steps__list{grid-template-columns:1fr;gap:36px;padding-left:26px}
   .genai-steps__list::before{top:8px;bottom:8px;left:8px;right:auto;width:2px;height:auto;
@@ -541,28 +545,42 @@ select.genai-field__input{appearance:auto}
       <div class="genai-section-head genai-reveal">
         <p class="genai-label" aria-hidden="true">STEP</p>
         <h2>伴走支援は、<br>小さく始めて定着まで進めます。</h2>
-        <p class="genai-section-lead">業務棚卸しから優先順位づけ、環境構築、定着までをタイムラインで見せます。</p>
+        <p class="genai-section-lead">業務の整理から実践、定着、そして仕組み化までをタイムラインで見せます。</p>
       </div>
       <ol class="genai-steps__list" role="list">
         <li class="genai-step genai-reveal">
           <span class="genai-step__num" aria-hidden="true">STEP 1</span>
-          <h3>業務棚卸し</h3><p class="genai-step__tag">課題を可視化</p>
-          <p class="genai-step__desc">どの業務に時間がかかっているかを整理してAI活用の優先順位を設計します。</p>
+          <h3>AIを使う業務を見つける</h3><p class="genai-step__tag">業務を整理する</p>
+          <p class="genai-step__desc">どの業務にAIを使えるかを一緒に整理し、効果の出やすい業務から優先順位を設計します。</p>
+          <ul class="genai-step__examples" role="list">
+            <li><span class="genai-step__exicon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2.5" width="12" height="15" rx="1.5"/><path d="M7 7h6M7 10h6M7 13h4"/></svg></span>議事録・決定事項の自動作成</li>
+            <li><span class="genai-step__exicon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="15" height="11" rx="1.5"/><path d="M3 5.5l7 5.5 7-5.5"/></svg></span>定型メール・文書の下書き</li>
+          </ul>
         </li>
         <li class="genai-step genai-reveal">
           <span class="genai-step__num" aria-hidden="true">STEP 2</span>
-          <h3>優先順位づけ</h3><p class="genai-step__tag">効果の大きい業務から</p>
-          <p class="genai-step__desc">成果が出やすく・失敗リスクの小さい業務から着手。スモールスタートで成功体験を積みます。</p>
+          <h3>自社に合った使い方を実践する</h3><p class="genai-step__tag">AIを業務に取り入れる</p>
+          <p class="genai-step__desc">見つけた業務からスモールスタートでAIを実践投入し、自社に合った使い方を一緒に磨いていきます。</p>
+          <ul class="genai-step__examples" role="list">
+            <li><span class="genai-step__exicon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="15" height="15" rx="1.5"/><path d="M2.5 8h15M8 2.5v15"/></svg></span>Excel・CSVデータの集計</li>
+            <li><span class="genai-step__exicon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2.5h10v15l-2.2-1.5-2.3 1.5-2.3-1.5L6 17.5l-1-.7V2.5z"/><path d="M7.3 7h5.4M7.3 10h5.4"/></svg></span>請求書・注文書の読み取りと転記</li>
+          </ul>
         </li>
         <li class="genai-step genai-reveal">
           <span class="genai-step__num" aria-hidden="true">STEP 3</span>
-          <h3>環境構築</h3><p class="genai-step__tag">既存環境を活用</p>
-          <p class="genai-step__desc">Google Workspace＋GAS＋Geminiなど新規システム導入なし。月額API費用、AIツール課金などは数百〜数千円程度。</p>
+          <h3>社内で継続して使える状態へ</h3><p class="genai-step__tag">活用を定着させる</p>
+          <p class="genai-step__desc">一部の担当者だけで終わらせず、現場で使い続けられる状態になるまで伴走します。</p>
+          <ul class="genai-step__examples" role="list">
+            <li><span class="genai-step__exicon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4.5h14a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H9l-4 3v-3H3a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1z"/></svg></span>社内問い合わせ対応の効率化</li>
+          </ul>
         </li>
         <li class="genai-step genai-reveal">
           <span class="genai-step__num" aria-hidden="true">STEP 4</span>
-          <h3>定着・自走</h3><p class="genai-step__tag">社内で回る状態へ</p>
-          <p class="genai-step__desc">支援終了後も社内で自走できる状態を目指して伴走。ツール開発だけで終わりません。</p>
+          <h3>AI活用を仕組み化する</h3><p class="genai-step__tag">さらに業務を効率化する</p>
+          <p class="genai-step__desc">支援終了後も社内で自走できるよう、繰り返し業務の自動化まで仕組み化を後押しします。</p>
+          <ul class="genai-step__examples" role="list">
+            <li><span class="genai-step__exicon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6a1 1 0 0 1 1-1h4l1.5 2H16a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H3.5a1 1 0 0 1-1-1V6z"/></svg></span>大量のPDF・ファイルの整理</li>
+          </ul>
         </li>
       </ol>
     </div>
