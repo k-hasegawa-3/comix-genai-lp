@@ -135,12 +135,13 @@ body.admin-bar{--genai-admin-h:32px}
 
 /* ===== data ===== */
 .genai-data{position:relative;overflow:hidden;background:var(--genai-ink-900)}
+.genai-data .genai-section-head{margin-bottom:40px}
 .genai-glow--data::before{width:560px;height:560px;right:-180px;top:12%;
   background:radial-gradient(circle, rgba(139,92,246,.22), rgba(59,130,246,.1) 60%, transparent 75%)}
 .genai-glow--data::after{width:480px;height:480px;left:-180px;bottom:6%;
   background:radial-gradient(circle, rgba(34,211,238,.16), transparent 70%)}
-.genai-data__row{display:grid;grid-template-columns:auto 1fr 1fr;gap:44px;align-items:center;
-  background:rgba(16,27,51,.5);border:1px solid rgba(234,240,250,.1);border-radius:20px;padding:44px 48px}
+.genai-data__row{display:grid;grid-template-columns:auto 1fr 1fr;gap:36px;align-items:center;
+  background:rgba(16,27,51,.5);border:1px solid rgba(234,240,250,.1);border-radius:20px;padding:36px 40px}
 .genai-donut{position:relative;width:172px;height:172px;flex:none;margin:0 auto}
 .genai-donut__ring{position:absolute;inset:0;border-radius:50%;
   background:conic-gradient(var(--donut-color) calc(var(--p)*1%), rgba(234,240,250,.12) 0);
@@ -158,20 +159,21 @@ body.admin-bar{--genai-admin-h:32px}
 .genai-bar__fill{height:100%;width:var(--w);border-radius:5px;transition:width 1s ease}
 .genai-bar__fill--blue{background:linear-gradient(90deg,var(--genai-blue),var(--genai-cyan))}
 .genai-bar__fill--orange{background:linear-gradient(90deg,var(--genai-orange),#FDBA74)}
-.genai-source{font-size:13px;color:rgba(234,240,250,.78);text-align:center;margin-top:26px}
-.genai-data__cta{margin-top:100px}
+.genai-source{font-size:13px;color:rgba(234,240,250,.78);text-align:center;margin-top:18px}
+.genai-data__cta{margin-top:56px}
+.genai-data__cta.genai-cta-block{padding:32px 0}
 .genai-cta-block{text-align:center;padding:48px 0}
 .genai-cta-block__lead{font-size:17px;font-weight:600;letter-spacing:.01em;margin:0 0 18px;color:var(--genai-text-main)}
 .genai-cta-block__note{margin:16px 0 0;font-size:13px;color:var(--genai-text-muted)}
 .genai-cta-block--dark .genai-cta-block__lead{color:var(--genai-text-on-dark)}
 .genai-cta-block--dark .genai-cta-block__note{color:rgba(234,240,250,.68)}
-.genai-data__head2{margin-top:150px}
+.genai-data__head2{margin-top:64px}
 .genai-data__pair{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .genai-data__pairitem{text-align:center;background:rgba(16,27,51,.5);border:1px solid rgba(234,240,250,.1);
-  border-radius:20px;padding:44px 36px}
-.genai-data__pairitem h3{color:#fff;font-size:17px;font-weight:700;margin:26px 0 10px}
+  border-radius:20px;padding:32px 28px}
+.genai-data__pairitem h3{color:#fff;font-size:17px;font-weight:700;margin:18px 0 8px}
 .genai-data__pairitem p{color:rgba(234,240,250,.82);font-size:14px;max-width:420px;margin:0 auto}
-.genai-data__bridge{color:#fff;text-align:center;font-weight:900;font-size:clamp(18px,2.4vw,24px);line-height:1.7;margin-top:80px}
+.genai-data__bridge{color:#fff;text-align:center;font-weight:900;font-size:clamp(18px,2.4vw,24px);line-height:1.7;margin-top:40px}
 @media (max-width:1023px){
   .genai-data__row{grid-template-columns:auto 1fr;gap:32px}
   .genai-data__bars{grid-column:1 / -1}
@@ -180,7 +182,7 @@ body.admin-bar{--genai-admin-h:32px}
   .genai-data__row{grid-template-columns:1fr;padding:32px 22px;gap:26px;text-align:center}
   .genai-data__bars{grid-column:auto;text-align:left}
   .genai-data__pair{grid-template-columns:1fr}
-  .genai-data__head2{margin-top:100px}
+  .genai-data__head2{margin-top:56px}
   .genai-source{font-size:13px;padding:0 4px}
 }
 
@@ -446,8 +448,8 @@ select.genai-field__input{appearance:auto}
     <div class="genai-section__inner">
       <div class="genai-section-head genai-section-head--dark genai-reveal">
         <p class="genai-label" aria-hidden="true">DATA 01</p>
-        <h2>リスキリングは必要。<br>でも中小企業ほど始めにくい。</h2>
-        <p class="genai-section-lead">AI時代に学び直しの重要性は高まっています。<br>一方で、中小企業では人手や予算の制約から、実施率に差が出ています。</p>
+        <h2>生成AIの普及で、<br>学び直しが当たり前になる時代へ。</h2>
+        <p class="genai-section-lead">大企業も中小企業も、学び直し（リスキリング）に動き出しています。</p>
       </div>
       <div class="genai-data__row genai-reveal">
         <figure class="genai-donut" data-donut style="--p:41.7;--donut-color:var(--genai-orange)">
@@ -456,7 +458,7 @@ select.genai-field__input{appearance:auto}
         </figure>
         <div class="genai-data__desc">
           <h3>中小企業のリスキリング実施予定率</h3>
-          <p>大企業60.7%に対し、中小企業は41.7%。必要性は分かっていても、実行に移すハードルがあります。</p>
+          <p>大企業60.7%、中小企業41.7%が学び直しを予定。企業規模を問わず広がる動きです。</p>
         </div>
         <div class="genai-data__bars">
           <h3>企業規模別の実施予定率</h3>
@@ -478,8 +480,8 @@ select.genai-field__input{appearance:auto}
       </div>
       <div class="genai-section-head genai-section-head--dark genai-data__head2 genai-reveal">
         <p class="genai-label" aria-hidden="true">DATA 02</p>
-        <h2>生成AIで方針見直しが進む一方、<br>導入はまだこれから。</h2>
-        <p class="genai-section-lead">難しい導入ではなく、業務に合わせた小さな成功体験が必要です。</p>
+        <h2>重要性は伝わっている。<br>でも、導入・定着はまだこれから。</h2>
+        <p class="genai-section-lead">生成AIの重要性は認識されていても、活用し切れている企業はまだ少数です。</p>
       </div>
       <div class="genai-data__pair">
         <div class="genai-data__pairitem genai-reveal">
@@ -488,7 +490,7 @@ select.genai-field__input{appearance:auto}
             <p class="genai-donut__value"><span data-count="86.3">86.3</span><small>%</small></p>
           </figure>
           <h3>生成AI普及で方針を見直した企業</h3>
-          <p>大きく変化29.2%と一部見直し57.1%の合計。AI前提の育成に舵を切る企業が増えています。</p>
+          <p>「大きく変化」29.2%+「一部見直し」57.1%。育成方針の転換が急速に進んでいます。</p>
         </div>
         <div class="genai-data__pairitem genai-reveal">
           <figure class="genai-donut" data-donut style="--p:20.4;--donut-color:var(--genai-blue)">
@@ -496,11 +498,11 @@ select.genai-field__input{appearance:auto}
             <p class="genai-donut__value"><span data-count="20.4">20.4</span><small>%</small></p>
           </figure>
           <h3>中小企業のAI導入率</h3>
-          <p>全社導入と一部業務導入の合計。今から始める余地が大きい領域です。</p>
+          <p>全社導入+一部業務導入の合計。多くの企業がこれから着手する段階です。</p>
         </div>
       </div>
       <p class="genai-source genai-reveal">出典：パーソルイノベーション株式会社 Reskilling Camp　同調査／独立行政法人 中小企業基盤整備機構　中小企業のAI等の利活用に係る実態調査（2026年3月）</p>
-      <p class="genai-data__bridge genai-reveal">Comixは、研修・業務整理・自動化をつなげて<br>「自社でも使えそう」をつくります!!</p>
+      <p class="genai-data__bridge genai-reveal">重要性が高いからこそ、日々の業務に定着させる伴走が必要です。<br>Comixは、研修・業務整理・自動化をつなげて「自社でも使えそう」をつくります。</p>
     </div>
   </section>
   <section class="genai-plans" id="plans">
