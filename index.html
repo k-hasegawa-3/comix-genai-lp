@@ -685,7 +685,7 @@ select.genai-field__input{appearance:auto}
       <div class="genai-glass genai-contact__flow genai-reveal">
         <h3>お問い合わせ後の流れ</h3>
         <ol role="list">
-          <li><span class="genai-contact__flownum" aria-hidden="true">01</span>3営業日以内に担当者よりご連絡</li>
+          <li><span class="genai-contact__flownum" aria-hidden="true">01</span>1営業日以内に担当者よりご連絡</li>
           <li><span class="genai-contact__flownum" aria-hidden="true">02</span>課題や検討状況をヒアリング</li>
           <li><span class="genai-contact__flownum" aria-hidden="true">03</span>最適な支援内容をご提案</li>
         </ol>
@@ -738,7 +738,7 @@ select.genai-field__input{appearance:auto}
           <div class="genai-field genai-field-consent">
             <label class="genai-consent-option">
               <input type="checkbox" id="genai-consent" name="consent" required>
-              <span><a href="https://www.comix.co.jp/handling-of-personal-information/" target="_blank" rel="noopener">プライバシーポリシー</a>に同意する</span>
+              <span><a href="https://www.comix.co.jp/handling-of-personal-information/" target="_blank" rel="noopener">個人情報の取り扱い</a>について同意する</span>
             </label>
           </div>
           <button type="submit" class="genai-btn genai-btn--cta genai-contact__submit">送信する</button>
@@ -832,7 +832,7 @@ select.genai-field__input{appearance:auto}
           if(bad) msgs.push((f.labels && f.labels[0] ? f.labels[0].textContent : f.name) + '： ' + f.validationMessage);
         });
         var consent = document.getElementById('genai-consent');
-        if(consent && !consent.checked){ msgs.push('プライバシーポリシーへの同意が必要です'); }
+        if(consent && !consent.checked){ msgs.push('個人情報の取り扱いへの同意が必要です'); }
         if(msgs.length){
           errBox.hidden = false;
           errBox.innerHTML = msgs.map(function(m){ return '<p>' + m.replace(/</g, '&lt;') + '</p>'; }).join('');
